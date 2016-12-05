@@ -11,7 +11,6 @@ import javax.persistence.criteria.Root;
 import org.springframework.stereotype.Repository;
 import javax.persistence.criteria.CriteriaQuery;
 
-
 @Repository ("instituteDao")
 public class InstituteDaoImpl extends AbstractDao implements InstituteDao
 {
@@ -22,11 +21,13 @@ public class InstituteDaoImpl extends AbstractDao implements InstituteDao
 
     public List<Institute> getAll()
     {
-        CriteriaBuilder criteriaBuilder = getSession().getCriteriaBuilder();
-        CriteriaQuery<Institute>  instituteCriteriaQuery = criteriaBuilder.createQuery(Institute.class);
+        EntityManager entitymanager = entityManagerFactory.createEntityManager();
+        CriteriaBuilder criteriaBuilder = entitymanager.getCriteriaBuilder();
+        CriteriaQuery<Institute> instituteCriteriaQuery = criteriaBuilder.createQuery(Institute.class);
         Root<Institute> instituteRoot = instituteCriteriaQuery.from(Institute.class);
         instituteCriteriaQuery.select(instituteRoot);
-
-        return null;
+        TypedQuery<Institute> q = entitymanager.createQuery(instituteCriteriaQuery);
+        List<Institute> allInstitute = q.getResultList();
+        return allInstitute;
     }
 }
