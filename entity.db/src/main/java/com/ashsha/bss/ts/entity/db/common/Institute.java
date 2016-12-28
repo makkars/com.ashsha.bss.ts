@@ -1,19 +1,20 @@
-package com.ashsha.bss.ts.models;
+package com.ashsha.bss.ts.entity.db.common;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table (name = "institute")
-public class Institute
+public class Institute extends com.ashsha.bss.ts.entity.db.core.Entity
 {
     @Id
-    @GeneratedValue (generator = "increment")
-    @GenericGenerator (name = "increment", strategy = "increment")
+    @GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "instituteSequence")
+    @SequenceGenerator (name = "instituteSequence", sequenceName = "Institute_SEQ", allocationSize = 1, initialValue = 1)
     @Column (name = "id")
     private Long id;
 
@@ -133,3 +134,4 @@ public class Institute
         return sb.toString();
     }
 }
+

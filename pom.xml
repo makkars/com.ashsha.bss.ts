@@ -16,6 +16,8 @@
         <module>core</module>
         <module>configurations</module>
         <module>tuitionServer</module>
+        <module>entity.db</module>
+        <module>entity.db.service</module>
 
     </modules>
 

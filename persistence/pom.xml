@@ -27,10 +27,6 @@
             <artifactId>hibernate-envers</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.ashsha.bss.ts</groupId>
             <artifactId>models</artifactId>
         </dependency>

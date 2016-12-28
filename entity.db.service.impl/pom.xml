@@ -3,46 +3,47 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
-        <groupId>com.ashsha.bss.ts</groupId>
         <artifactId>compile</artifactId>
+        <groupId>com.ashsha.bss.ts</groupId>
         <version>0.1.0-SNAPSHOT</version>
-        <relativePath>../compile</relativePath>
+        <relativePath>../compile/pom.xml</relativePath>
     </parent>
 
-    <artifactId>tutionServer</artifactId>
+    <artifactId>entity.db.service.impl</artifactId>
     <version>0.1.0-SNAPSHOT</version>
 
     <name>${project.groupId}/${project.artifactId}</name>
     <description>${project.name} definition</description>
 
+    <properties>
+        <bundle.symbolicName>com.ashsha.bss.ts.entity.db.${project.artifactId}</bundle.symbolicName>
+        <bundle.namespace>com.ashsha.bss.ts.entity.db.${project.artifactId}</bundle.namespace>
+    </properties>
+
+
     <dependencies>
         <dependency>
-            <groupId>com.ashsha.bss.ts</groupId>
-            <artifactId>models</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.ashsha.bss.ts</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>entity.db</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.ashsha.bss.ts</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>entity.db.service</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.ashsha.bss.ts</groupId>
-            <artifactId>entity.db.service.impl</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.ashsha.bss.ts</groupId>
-            <artifactId>configurations</artifactId>
-        </dependency>
 
         <dependency>
-            <groupId>com.ashsha.bss.ts</groupId>
-            <artifactId>persistence</artifactId>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>entity.db</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>transaction-api</artifactId>
+        </dependency>
     </dependencies>
+
 </project>
