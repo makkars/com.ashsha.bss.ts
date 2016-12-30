@@ -23,7 +23,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableTransactionManagement
 @Configuration
-@ComponentScan ("com.ashsha.bss.ts.configuration")
+//@ComponentScan ("com.ashsha.bss.ts.configuration")
 public class HibernateConfiguration
 {
     @Bean (name = "dataSource")
@@ -43,7 +43,7 @@ public class HibernateConfiguration
     {
         LocalSessionFactoryBean localSessionFactoryBean = new LocalSessionFactoryBean();
         localSessionFactoryBean.setDataSource(dataSource);
-        localSessionFactoryBean.setPackagesToScan(new String[] { "com.ashsha.bss.ts.*" });
+        localSessionFactoryBean.setPackagesToScan(new String[] { "com.ashsha.bss.ts.entity.*" });
         localSessionFactoryBean.setHibernateProperties(hibernateProperties());
         localSessionFactoryBean.afterPropertiesSet();
         return localSessionFactoryBean.getObject();

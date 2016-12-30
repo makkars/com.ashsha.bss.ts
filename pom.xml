@@ -11,9 +11,6 @@
 
     <modules>
         <module>compile</module>
-        <module>persistence</module>
-        <module>models</module>
-        <module>core</module>
         <module>configurations</module>
         <module>tuitionServer</module>
         <module>entity.db</module>

@@ -2,10 +2,6 @@ package com.ashsha.bss.ts.tuitionServer.main;
 
 import com.ashsha.bss.ts.configuration.ApplicationConfiguration;
 import com.ashsha.bss.ts.entity.db.common.Institute;
-import com.ashsha.bss.ts.entity.db.service.impl.JpaDao;
-import com.ashsha.bss.ts.persistence.service.InstituteService;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
@@ -15,13 +11,17 @@ public class HibernateMain
     {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
-        JpaDao jpaDao = (JpaDao) context.getBean("genericDao");
-        jpaDao.persist(getInstitute());
+        System.out.print("--------------- \n"
+                + context.getBean("beanMapper")
+                + "--------------- \n"
+                + context.getBean("genericDao"));
 
-        Long count = jpaDao.count(Institute.class);
-
-        System.out.print(count + "------------------------------" + "\n" + jpaDao.getAll(Institute.class));
-
+        System.out.print("--------------- \n" + context.getBean("entityConverter"));
+        //        JpaDao jpaDao = (JpaDao) context.getBean("genericDao");
+        //        jpaDao.persist(getInstitute());
+        //
+        //        Long count = jpaDao.count(Institute.class);
+        //        System.out.print(count + "------------------------------" + "\n" + jpaDao.getAll(Institute.class));
 
         //        InstituteService instituteService = (InstituteService) context.getBean("instituteService");
         //
@@ -34,7 +34,7 @@ public class HibernateMain
     public static Institute getInstitute()
     {
         Institute i = new Institute();
-//        i.setId(4L);
+        //        i.setId(4L);
         i.setName("MineInstitute");
         i.setAdminName("Myself");
         i.setAdminContactPrimary(9912112L);
