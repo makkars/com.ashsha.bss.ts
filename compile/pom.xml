@@ -23,16 +23,6 @@
         <dependencies>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>models</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
                 <artifactId>configurations</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -44,11 +34,6 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>converters.impl</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>persistence</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

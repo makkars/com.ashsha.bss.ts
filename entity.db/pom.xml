@@ -40,10 +40,6 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-envers</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.ashsha.bss.ts</groupId>
-            <artifactId>models</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
