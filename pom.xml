@@ -16,6 +16,7 @@
         <module>entity.db</module>
         <module>entity.db.service</module>
         <module>entity.db.service.impl</module>
+        <module>entity.dto</module>
 
     </modules>
 
