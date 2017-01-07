@@ -17,19 +17,14 @@
         <module>entity.db.service</module>
         <module>entity.db.service.impl</module>
         <module>entity.dto</module>
+        <module>entity.converters</module>
+        <module>business.handler</module>
+        <module>business.handler.impl</module>
+        <module>common</module>
 
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 </project>

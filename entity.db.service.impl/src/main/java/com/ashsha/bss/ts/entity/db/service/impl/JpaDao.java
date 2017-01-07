@@ -10,6 +10,7 @@ import com.ashsha.bss.ts.entity.db.service.restriction.EqualRestriction;
 import com.ashsha.bss.ts.entity.db.service.restriction.IRestriction;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -17,7 +18,6 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import org.hibernate.Session;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -33,8 +33,7 @@ public class JpaDao implements IDAO
     // Currently i am managing entityManager from EMF .
     // need to move to JTA . for which more concept brain storming is required.
     // have few linked saved . will check those.
-    @Autowired
-    //    @PersistenceContext
+    @PersistenceContext (unitName = "ts")
     protected EntityManager entityManager;
 
     /**
@@ -70,11 +69,13 @@ public class JpaDao implements IDAO
     @Override
     public void persist(Entity entity)
     {
-        org.hibernate.Session session = (Session) getEntityManager().getDelegate();
-        session.beginTransaction();
-        session.saveOrUpdate(entity);
+        //        session.beginTransaction();
+        //        session.saveOrUpdate(entity);
+        //        session.getTransaction().commit();
+
+        org.hibernate.Session session = (Session) getEntityManager().unwrap(Session.class);
+        getEntityManager().persist(entity);
         session.flush();
-        session.getTransaction().commit();
     }
 
     @Override

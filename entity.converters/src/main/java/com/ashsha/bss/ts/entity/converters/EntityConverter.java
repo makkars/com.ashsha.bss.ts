@@ -1,12 +1,10 @@
-package com.ashsha.bss.ts.entity.db.service.impl;
+package com.ashsha.bss.ts.entity.converters;
 
 import java.util.ArrayList;
 import java.util.List;
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service ("entityConverter")
 public class EntityConverter implements IEntityConverter
 {
     @Autowired

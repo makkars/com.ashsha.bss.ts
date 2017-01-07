@@ -11,34 +11,26 @@
         <relativePath>../compile</relativePath>
     </parent>
 
-    <artifactId>entity.db</artifactId>
+    <artifactId>entity.converters</artifactId>
 
     <name>${project.groupId}/${project.artifactId}</name>
     <description>${project.name} definition</description>
 
     <properties>
-        <bundle.symbolicName>com.ashsha.bss.ts.entity.db.${project.artifactId}</bundle.symbolicName>
-        <bundle.namespace>com.ashsha.bss.ts.entity.db.${project.artifactId}</bundle.namespace>
+        <bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
+        <bundle.namespace>${project.groupId}.${project.artifactId}</bundle.namespace>
     </properties>
 
 
     <dependencies>
         <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>javax.transaction</groupId>
-            <artifactId>transaction-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-envers</artifactId>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
         </dependency>
     </dependencies>
-
 </project>

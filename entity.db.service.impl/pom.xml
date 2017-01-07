@@ -7,11 +7,10 @@
         <artifactId>compile</artifactId>
         <groupId>com.ashsha.bss.ts</groupId>
         <version>0.1.0-SNAPSHOT</version>
-        <relativePath>../compile/pom.xml</relativePath>
+        <relativePath>../compile</relativePath>
     </parent>
 
     <artifactId>entity.db.service.impl</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
 
     <name>${project.groupId}/${project.artifactId}</name>
     <description>${project.name} definition</description>
@@ -21,12 +20,12 @@
         <bundle.namespace>com.ashsha.bss.ts.entity.db.${project.artifactId}</bundle.namespace>
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>entity.db</artifactId>
         </dependency>
+
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>entity.db.service</artifactId>
@@ -36,14 +35,22 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>entity.db</artifactId>
         </dependency>
+
         <dependency>
             <groupId>net.sf.dozer</groupId>
             <artifactId>dozer</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
             <artifactId>hibernate-jpa-2.1-api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>javax.transaction</groupId>
             <artifactId>transaction-api</artifactId>

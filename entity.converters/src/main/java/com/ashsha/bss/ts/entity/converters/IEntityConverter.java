@@ -1,4 +1,4 @@
-package com.ashsha.bss.ts.entity.db.service.impl;
+package com.ashsha.bss.ts.entity.converters;
 
 import java.util.List;
 

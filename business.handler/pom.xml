@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.ashsha.bss.ts</groupId>
         <artifactId>compile</artifactId>
@@ -11,34 +10,28 @@
         <relativePath>../compile</relativePath>
     </parent>
 
-    <artifactId>entity.db</artifactId>
-
+    <artifactId>business.handler</artifactId>
     <name>${project.groupId}/${project.artifactId}</name>
     <description>${project.name} definition</description>
 
     <properties>
-        <bundle.symbolicName>com.ashsha.bss.ts.entity.db.${project.artifactId}</bundle.symbolicName>
-        <bundle.namespace>com.ashsha.bss.ts.entity.db.${project.artifactId}</bundle.namespace>
+        <bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
+        <bundle.namespace>${project.groupId}.${project.artifactId}</bundle.namespace>
     </properties>
-
 
     <dependencies>
         <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <groupId>com.ashsha.bss.ts</groupId>
+            <artifactId>entity.db</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.transaction</groupId>
-            <artifactId>transaction-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-envers</artifactId>
+            <groupId>com.ashsha.bss.ts</groupId>
+            <artifactId>entity.dto</artifactId>
         </dependency>
     </dependencies>
-
 </project>
