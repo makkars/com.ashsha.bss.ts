@@ -1,6 +1,5 @@
 runner/
 target/
-META-INF/
 OSGI-INF/
 *.bak
 .settings/
