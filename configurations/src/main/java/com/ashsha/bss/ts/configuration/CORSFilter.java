@@ -9,9 +9,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 
-public class CORSFilter implements Filter {
+public class CORSFilter implements Filter
+{
 
-    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException
+    {
         System.out.println("Filtering on...........................................................");
         HttpServletResponse response = (HttpServletResponse) res;
         response.setHeader("Access-Control-Allow-Origin", "*");
@@ -20,9 +22,13 @@ public class CORSFilter implements Filter {
         response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
         chain.doFilter(req, res);
     }
- 
-    public void init(FilterConfig filterConfig) {}
- 
-    public void destroy() {}
- 
+
+    public void init(FilterConfig filterConfig)
+    {
+    }
+
+    public void destroy()
+    {
+    }
+
 }

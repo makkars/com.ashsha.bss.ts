@@ -3,26 +3,31 @@ package com.ashsha.bss.ts.configuration;
 import javax.servlet.Filter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class ApplicationServletConfiguration extends AbstractAnnotationConfigDispatcherServletInitializer {
-	 
+public class ApplicationServletConfiguration extends AbstractAnnotationConfigDispatcherServletInitializer
+{
+
     @Override
-    protected Class<?>[] getRootConfigClasses() {
+    protected Class<?>[] getRootConfigClasses()
+    {
         return new Class[] { ApplicationConfiguration.class };
     }
-  
+
     @Override
-    protected Class<?>[] getServletConfigClasses() {
+    protected Class<?>[] getServletConfigClasses()
+    {
         return null;
     }
-  
+
     @Override
-    protected String[] getServletMappings() {
+    protected String[] getServletMappings()
+    {
         return new String[] { "/" };
     }
- 
+
     @Override
-    protected Filter[] getServletFilters() {
-        Filter [] singleton = { new CORSFilter()};
+    protected Filter[] getServletFilters()
+    {
+        Filter[] singleton = { new CORSFilter() };
         return singleton;
     }
 }
