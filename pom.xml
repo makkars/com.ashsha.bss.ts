@@ -21,6 +21,7 @@
         <module>business.handler</module>
         <module>business.handler.impl</module>
         <module>common</module>
+        <module>rest.service</module>
 
     </modules>
 

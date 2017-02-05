@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table (name = "institute")
@@ -19,6 +21,8 @@ public class Institute extends com.ashsha.bss.ts.entity.db.core.Entity
     private Long id;
 
     @Column (name = "name")
+    @NotNull(message = "error.institute.notnull")
+    @Size (min = 2, max = 100, message = "error.institute.size")
     private String name;
 
     @Column (name = "admin_name")

@@ -12,18 +12,18 @@ public class HibernateMain
 {
     public static void main(String[] args)
     {
-        AbstractApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+//        AbstractApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+//
+//        String[] beans = context.getBeanDefinitionNames();
+//
+//                for (String bean : beans)
+//                {
+//                    System.out.println("Bean name   is: " + bean + "\nBean object is: " + context.getBean(bean));
+//                }
 
-        String[] beans = context.getBeanDefinitionNames();
-
-        //        for (String bean : beans)
-        //        {
-        //            System.out.println("Bean name   is: " + bean + "\nBean object is: " + context.getBean(bean));
-        //        }
-
-        TransactionalWrapperOperation transactionalWrapperOperation = (TransactionalWrapperOperation) context.getBean("transactionalWrapperOperation");
+//        TransactionalWrapperOperation transactionalWrapperOperation = (TransactionalWrapperOperation) context.getBean("transactionalWrapperOperation");
         //        transactionalWrapperOperation.registerInstitute(getInstitute());
-        transactionalWrapperOperation.deleteById(Institute.class, 22L);
+//        transactionalWrapperOperation.deleteById(Institute.class, 22L);
     }
 
     public static IInstituteDTO getInstitute()

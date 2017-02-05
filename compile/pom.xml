@@ -79,6 +79,19 @@
                 <artifactId>business.handler.impl</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+
+            <dependency>
+                <groupId>com.ashsha.bss.ts</groupId>
+                <artifactId>rest.service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ashsha.bss.ts</groupId>
+                <artifactId>rest.service.impl</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
